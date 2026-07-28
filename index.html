@@ -19,13 +19,13 @@
             font-display: swap;
         }
 
-
-        @font-face {
-            font-family: 'OngleipParkDahyeon';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
-            font-weight: normal;
-            font-display: swap;
-        }
+		@font-face {
+			font-family: 'MitmiFont';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+			font-weight: normal;
+			font-display: swap;
+		}
+		
 
         * { box-sizing: border-box; }
 
@@ -126,7 +126,7 @@
             display: inline-block;
             white-space: nowrap;
             animation: marquee-scroll 25s linear infinite;
-            font-family: 'OngleipParkDahyeon', sans-serif;
+            font-family: 'MitmiFont', sans-serif;
             font-size: 16px;
             color: #FF8600;
             text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
@@ -176,8 +176,8 @@
         .card-container { perspective: 1000px; width: 100%; height: 100%; cursor: pointer; user-select: none; }
         .card { width: 100%; height: 100%; position: relative; transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); transform-style: preserve-3d; transform-origin: center center; }
         .card.flipped { transform: rotateY(180deg); }
-        .card-face { position: absolute; width: 100%; height: 100%; border-radius: 6px; display: flex; justify-content: center; align-items: center; font-size: 19px; backface-visibility: hidden; border: 1px solid transparent; font-family: 'OngleipParkDahyeon', sans-serif; top: 0; left: 0; }
-        .card-front { background: linear-gradient(135deg, #FFF9F3, #FFE3CC); box-shadow: inset 0 0 0px rgba(255, 255, 255, 1), 0 0 0px rgba(255, 198, 153, 0.5); border-color: rgba(255, 154, 86, 0.6); color: #FF8600; position: relative; overflow: hidden; font-weight: bold; }
+        .card-face { position: absolute; width: 100%; height: 100%; border-radius: 6px; display: flex; justify-content: center; align-items: center; font-size: 19px; backface-visibility: hidden; border: 1px solid transparent; font-family: 'MitmiFont', sans-serif; top: 0; left: 0; }
+        .card-front { background: linear-gradient(135deg, #FFF9F3, #FFE3CC); box-shadow: inset 0 0 0px rgba(255, 255, 255, 1), 0 0 0px rgba(255, 198, 153, 0.5); border-color: rgba(255, 154, 86, 0.6); color: #FF8600; position: relative; overflow: hidden; font-weight: normal; }
         .card-front::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, rgba(255,198,153,0) 30%, rgba(255,255,255,0.9) 50%, rgba(255,198,153,0) 70%); transform: rotate(45deg) translate(-150%, -150%); transition: none; pointer-events: none; }
         .card.slot-glow .card-front::after { animation: rapid-slot-light 0.4s linear infinite; }
         @keyframes rapid-slot-light { 0% { transform: rotate(45deg) translate(-100%, -100%); } 100% { transform: rotate(45deg) translate(100%, 100%); } }
@@ -197,7 +197,7 @@
             box-shadow: 0 4px 10px rgba(224, 102, 0, 0.2);
         }
 
-        .all-flip-btn { position: relative; width: 100%; height: 44px; padding: 0; background: linear-gradient(135deg, #FFF9F3, #FFE3CC); color: #FF8600; border: 1px solid #FFE3CC; border-radius: 0.8em; cursor: pointer; font-size: 20px; font-family: 'OngleipParkDahyeon', sans-serif; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.2s ease; overflow: hidden; animation: ultra-smooth-glow 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+        .all-flip-btn { position: relative; width: 100%; height: 44px; padding: 0; background: linear-gradient(135deg, #FFF9F3, #FFE3CC); color: #FF8600; border: 1px solid #FFE3CC; border-radius: 0.8em; cursor: pointer; font-size: 20px; font-family: 'MitmiFont', sans-serif; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.2s ease; overflow: hidden; animation: ultra-smooth-glow 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
         .all-flip-btn .btn-text { font-size: 20px; position: relative; z-index: 3; }
         .all-flip-btn::before { content: ''; position: absolute; top: 0; left: -150%; width: 50%; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); transform: skewX(-25deg); animation: shimmer-glow 3.5s ease-in-out infinite; z-index: 2; }
         
@@ -210,7 +210,7 @@
             background: linear-gradient(135deg, #ffffff, #FFF9F3);
             color: #FF8600; border: 1px solid #FFE3CC;
             border-radius: 0.7em; cursor: pointer;
-            font-size: 15px; font-family: 'OngleipParkDahyeon', sans-serif;
+            font-size: 15px; font-family: 'MitmiFont', sans-serif;
             display: flex; align-items: center; justify-content: center;
             transition: transform 0.2s ease, background 0.2s ease;
             box-shadow: 0 2px 5px rgba(224, 102, 0, 0.15);
@@ -226,14 +226,14 @@
         @keyframes ultra-smooth-glow { 0%, 100% { box-shadow: 0 0 6px rgba(224, 102, 0, 0.4); } 50% { box-shadow: 0 0 14px rgba(224, 102, 0, 0.8); } }
 
         .prize-header { display: flex; justify-content: center; align-items: center; border-bottom: 2px dashed #FFC699; padding-bottom: 8px; margin: 0; min-height: 40px;}
-        .prize-title { font-family: 'OngleipParkDahyeon', sans-serif; font-size: 30px; color: #FF8600; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 8px #FFC699; margin: 0; font-weight: bold; }
+        .prize-title { font-family: 'MitmiFont', sans-serif; font-size: 30px; color: #FF8600; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 8px #FFC699; margin: 0; font-weight: normal; }
         
         .prize-banner-img { width: 120%; max-width: 240px; max-height: 100px; object-fit: contain; display: none; }
 
-        .prize-list { font-family: 'OngleipParkDahyeon', sans-serif; list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; height: auto; }
+        .prize-list { font-family: 'MitmiFont', sans-serif; list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; height: auto; }
         
         .prize-item { background: #ffffff; padding: 6px 10px; border-radius: 0.6em; font-size: 21px; border-left: 4px solid #FFE3CC; display: flex; gap: 5px; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        .prize-item.rank-1 { border-left-color: #E06600; font-weight: bold; }
+        .prize-item.rank-1 { border-left-color: #E06600; font-weight: normal; }
         .prize-item.rank-2 { border-left-color: #FF8533; }
         .prize-item.rank-3 { border-left-color: #FFC699; }
         
@@ -259,11 +259,11 @@
             position: relative;
         }
         
-        .answer-title { font-size: 14px; color: #FF8600; margin: 0; text-align: center; line-height: 1.4; border-bottom: 1px solid rgba(255, 198, 153, 0.3); padding-bottom: 5px; font-weight: bold; }
+        .answer-title { font-size: 14px; color: #FF8600; margin: 0; text-align: center; line-height: 1.4; border-bottom: 1px solid rgba(255, 198, 153, 0.3); padding-bottom: 5px; font-weight: normal; }
         
         .controls-row { display: flex; gap: 6px; }
         .opacity-control-box { flex: 1; background: rgba(255, 255, 255, 0.85); padding: 6px 8px; border-radius: 8px; border: 1px solid #FFC699; margin-bottom: 2px; }
-        .opacity-control-box label { display: flex; justify-content: space-between; font-size: 11px; color: #FF8600; margin-bottom: 3px; font-weight: bold; }
+        .opacity-control-box label { display: flex; justify-content: space-between; font-size: 11px; color: #FF8600; margin-bottom: 3px; font-weight: normal; }
         .opacity-slider { width: 100%; -webkit-appearance: none; background: #FFF2E6; height: 5px; border-radius: 3px; outline: none; cursor: pointer; border: 1px solid #FFC699; }
         .opacity-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: #E06600; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
         
@@ -273,7 +273,7 @@
             border-radius: 8px;
             color: #FF8600;
             font-size: 11px;
-            font-weight: bold;
+            font-weight: normal;
             font-family: 'NexonLv1Gothic', sans-serif;
             cursor: pointer;
             display: flex;
@@ -763,7 +763,7 @@
 
 	
 			const crownImg = `<img src="https://raw.githubusercontent.com/yuna-333/HAESOL_SOOP_raffle_ticket/main/crown.png" alt="왕관" style="width: 25px; height: 25px; vertical-align: middle; margin-right: 3px;">`;
-			const heartImg = `<img src="https://raw.githubusercontent.com/yuna-333/HAESOL_SOOP_raffle_ticket/main/orange-heart.png" alt="하트" style="width: 22px; height: 22px; vertical-align: middle; margin-right: 6px;">`;
+			const heartImg = `<img src="https://raw.githubusercontent.com/yuna-333/HAESOL_SOOP_raffle_ticket/main/orange-heart.png" alt="하트" style="width: 22px; height: 22px; vertical-align: middle; margin-right: 5px;">`;
 
 			let badgeIcon = (rank === 1) ? crownImg : heartImg;
 
@@ -869,7 +869,7 @@ updateMarquee();
                     cardBack.style.background = "#FFF9F3"; cardBack.style.borderColor = "#FFE3CC"; cardBack.style.color = "#FF8600"; 
                 }
             } else {
-                cardBack.innerHTML = '<img src="https://raw.githubusercontent.com/yuna-333/HAESOL_raffle_ticket/main/card_back.png" alt="꽝" style="width: 65%; height: 65%; object-fit: contain; opacity: 0.9;">';
+                cardBack.innerHTML = '<img src="https://raw.githubusercontent.com/yuna-333/HAESOL_SOOP_raffle_ticket/main/card_back.png" alt="꽝" style="width: 65%; height: 65%; object-fit: contain; opacity: 0.9;">';
                 cardBack.style.background = "#FFE7CC"; 
                 cardBack.style.borderColor = "#FFE3CC";
             }
